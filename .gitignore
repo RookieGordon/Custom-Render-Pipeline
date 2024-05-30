@@ -75,5 +75,6 @@ crashlytics-build.properties
 #Unity相关目录
 /Library
 /Logs
+/obj
 *.csproj
 *.vsconfig

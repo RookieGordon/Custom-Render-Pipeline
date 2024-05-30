@@ -20,7 +20,7 @@ Shader "Custom RP/Unlit"
             ZWrite [_ZWrite]
             
             HLSLPROGRAM
-            
+            #pragma target 3.5
             #include "UnlitPass.hlsl"
             #pragma vertex UnlitPassVertex
             #pragma fragment UnlitPassFragment
@@ -32,4 +32,6 @@ Shader "Custom RP/Unlit"
             ENDHLSL
         }
     }
+
+    CustomEditor "CustomShaderGUI"
 }

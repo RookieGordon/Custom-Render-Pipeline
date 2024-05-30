@@ -355,6 +355,7 @@
 "Assets/Custom RP/Runtime/CameraRenderer.Editor.cs"
 "Assets/Custom RP/Runtime/CustomRenderPipeline.cs"
 "Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs"
+"Assets/Custom RP/Runtime/Lighting.cs"
 -langversion:9.0
 
 /deterministic

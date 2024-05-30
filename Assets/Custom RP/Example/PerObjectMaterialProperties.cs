@@ -15,8 +15,15 @@ public class PerObjectMaterialProperties : MonoBehaviour
     public Color BaseColor = Color.white;
     
     private static int _cutOffId = Shader.PropertyToID("_Cutoff");
-    [FormerlySerializedAs("cutoff")] [SerializeField, Range(0f, 1f)]
-    public float cutOff = 0.5f;
+    [SerializeField, Range(0f, 1f)]
+    public float CutOff = 0.5f;
+    
+    private static int _metallicId = Shader.PropertyToID("_Metallic");
+    [SerializeField, Range(0f, 1f)]
+    public float Metallic = 0.0f;
+    private static int _smoothness = Shader.PropertyToID("_Smoothness");
+    [SerializeField, Range(0f, 1f)]
+    public float Smoothness = 0.5f;
 
     public void Awake()
     {
@@ -29,7 +36,9 @@ public class PerObjectMaterialProperties : MonoBehaviour
         }
         
         _block.SetColor(_baseColorId, BaseColor);
-        _block.SetFloat(_cutOffId, cutOff);
+        _block.SetFloat(_cutOffId, CutOff);
+        _block.SetFloat(_metallicId, Metallic);
+        _block.SetFloat(_smoothness, Smoothness);
         GetComponent<Renderer>().SetPropertyBlock(_block);
     }
 }
